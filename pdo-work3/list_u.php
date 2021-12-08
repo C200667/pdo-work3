@@ -55,7 +55,7 @@ try{
 <p>データ件数：<?php echo $count;?>件</p>
 
 <div class="container">
-    <form action="list_u.php" method="POST"></form>
+    <form action="edit.php" method="POST">
 
 <table border=1>
     <tr><th>id</th><th>名前</th><th>メールアドレス</th><th>性別</th><th>選択対象</th></tr>
@@ -76,8 +76,7 @@ try{
         ?>
     </td>
     <td>
-        <input type="radio" id="gender" name="編集" >
-        <label for="gender">編集</label>
+        <input type='radio' name='edit' id='edit' value="<?php echo $row['id'];?>">編集 
     </td>
     </tr>
     <?php endforeach; ?>
@@ -90,6 +89,7 @@ try{
             <button type="button" onclick="location.href='search_u.php'">戻る</button>
 	        <button type="submit" class="btn btn--naby btn--shadow">編集する</button>
         </div>
+</form>
 </form>
 </div>
 
